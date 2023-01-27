@@ -8,51 +8,119 @@
     android:background="@drawable/gradient_background"
     tools:context=".about_us_page">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="72dp"
-        android:layout_height="24dp"
-        android:text="About Us:"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.063" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="210dp"
-        android:layout_height="96dp"
-        android:text="This application is developed by a group of student from Bachelor Degree of Computer Science (Artificial Intelliegence) in UTeM."
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.119"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="174dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#F3EEEE"
+        android:elevation="5dp"
+        android:foregroundTint="#1E1B1B"
+        android:textAlignment="center"
+        android:translationZ="5dp"
+        app:cardCornerRadius="12dp"
+        app:cardUseCompatPadding="false"
+        app:contentPadding="5dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.22" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="217dp"
-        android:layout_height="89dp"
-        android:text="Developed by: \n Poh Soon Heng B032010010 \n Beh Kar Soon B032010466 \n Sue Chen Xiang B032010034"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.123"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.461" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About Us:"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.055"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.063" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="379dp"
+        android:layout_height="179dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#F3EEEE"
+        android:elevation="5dp"
+        android:foregroundTint="#1E1B1B"
+        android:textAlignment="center"
+        android:translationZ="5dp"
+        app:cardCornerRadius="12dp"
+        app:cardUseCompatPadding="false"
+        app:contentPadding="5dp"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:gravity="end"
+            android:text="This application is developed by a group of student from Bachelor Degree of Computer Science (Artificial Intelliegence) in UTeM."
+            android:textAlignment="textStart"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.119"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.22" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="376dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#F3EEEE"
+        android:elevation="5dp"
+        android:foregroundTint="#1E1B1B"
+        android:textAlignment="center"
+        android:translationZ="5dp"
+        app:cardCornerRadius="12dp"
+        app:cardUseCompatPadding="false"
+        app:contentPadding="10dp"
+        app:layout_constraintStart_toStartOf="@+id/cardView2"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="384dp"
+            android:layout_height="163dp"
+            android:text="Developed by: \n 1) Poh Soon Heng B032010010 \n 2) Beh Kar Soon B032010466 \n 3) Sue Chen Xiang B032010034"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.123"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.461" />
+    </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="185dp"
+        android:layout_height="61dp"
+        android:elevation="15dp"
+        android:shadowColor="#090909"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="3"
         android:text="back"
+        android:textSize="24sp"
+        android:translationZ="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.43"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.828" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cardView3"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3"
+        app:layout_constraintVertical_bias="0.322" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

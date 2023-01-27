@@ -21,8 +21,6 @@ public class about_us_page extends AppCompatActivity implements View.OnClickList
     }
 
     public void onClick(View view){
-//        Intent intent = new Intent(getBaseContext(), home_page.class);
-//        startActivity(intent);
         finish();
     }
 
