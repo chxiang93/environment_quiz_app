@@ -37,7 +37,8 @@ public class home_page extends AppCompatActivity implements View.OnClickListener
             startActivity(intent);
         } else if (view.getId() == R.id.exit) {
             // Construct Java solution to exit activity
-
+            finish();
+            System.exit(0);
         }
     }
 }
