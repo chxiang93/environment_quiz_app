@@ -7,6 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+// Group 22
+// Group Members:
+// 1) Poh Soon Heng B0321010010
+// 2) Beh Kar Soon B032010466
+// 3) Sue Chen Xiang B032010034
+
 public class result_page extends AppCompatActivity{
     private TextView tv, tv2, tv3;
     private Button btnRestart;

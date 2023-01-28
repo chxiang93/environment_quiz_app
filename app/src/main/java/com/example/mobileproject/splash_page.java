@@ -8,6 +8,12 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+// Group 22
+// Group Members:
+// 1) Poh Soon Heng B0321010010
+// 2) Beh Kar Soon B032010466
+// 3) Sue Chen Xiang B032010034
+
 public class splash_page extends AppCompatActivity {
     private ImageView app_name;
 
