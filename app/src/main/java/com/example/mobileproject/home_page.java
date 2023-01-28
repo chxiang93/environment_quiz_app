@@ -33,6 +33,7 @@ public class home_page extends AppCompatActivity implements View.OnClickListener
             // Construct Java solution to open the play activity
             Intent intent = new Intent(getBaseContext(), play_page.class);
             startActivity(intent);
+            finish();
         } else if (view.getId() == R.id.about) {
             // Construct Java solution to open the about us activity
             Intent intent = new Intent(getBaseContext(), about_us_page.class);

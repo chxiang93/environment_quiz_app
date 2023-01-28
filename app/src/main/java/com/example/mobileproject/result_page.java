@@ -39,6 +39,7 @@ public class result_page extends AppCompatActivity{
             public void onClick(View v) {
                 Intent in = new Intent(getApplicationContext(),home_page.class);
                 startActivity(in);
+                finish();
             }
         });
     }

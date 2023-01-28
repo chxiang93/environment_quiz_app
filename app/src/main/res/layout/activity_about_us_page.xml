@@ -61,8 +61,6 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|end"
-            android:gravity="end"
             android:text="This application is developed by a group of student from Bachelor Degree of Computer Science (Artificial Intelligence) in UTeM."
             android:textAlignment="textStart"
             android:textSize="26sp"

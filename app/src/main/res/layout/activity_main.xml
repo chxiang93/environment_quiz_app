@@ -114,6 +114,7 @@
         android:shadowRadius="5"
         android:text="Exit"
         android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:translationX="5dp"
         android:translationZ="5dp"

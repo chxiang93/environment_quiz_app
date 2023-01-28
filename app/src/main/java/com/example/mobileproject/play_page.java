@@ -10,12 +10,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class play_page extends AppCompatActivity {
-    TextView tv;
-    Button submitButton, quitButton;
+    TextView tv, tv_qno;
+    Button prevButton, nextButton, quitButton;
     RadioGroup radio_g;
     RadioButton rb1,rb2,rb3,rb4;
 
-    String questions[] = {
+    String[] questions = {
             "Which of the following is not a greenhouse gas?",
             "The use of fossil fuels is responsible for the increase in the amount of which gas in the atmosphere?",
             "Climate includes ...",
@@ -27,8 +27,8 @@ public class play_page extends AppCompatActivity {
             "Global warming is caused ...",
             "Rainforests once covered 14% of the earth's land surface; now they cover .... "
     };
-    String answers[] = {"Nitrogen","Carbon dioxide","All of these","Cigarettes","China","17 trees","Fossil fuels","100 years","Both by human and natural factors.","6%"};
-    String opt[] = {
+    String[] answers = {"Nitrogen","Carbon dioxide","All of these","Cigarettes","China","17 trees","Fossil fuels","100 years","Both by human and natural factors.","6%"};
+    String[] opt = {
             "Nitrogen","Ozone","Methane","Carbon dioxide",
             "Argon","Ozone","Carbon dioxide","Nitrogen",
             "General patterns of atmosphere conditions","Seasonal variation","Average weather of an area","All of these",
@@ -40,8 +40,10 @@ public class play_page extends AppCompatActivity {
             "Only by human activity.","Only by natural factors.","Mainly by natural factors.","Both by human and natural factors.",
             "6%","8%","10%","12%"
     };
+
     int flag=0;
-    public static int marks=0,correct=0,wrong=0;
+    public static int marks=0, correct=0, wrong=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,9 +51,10 @@ public class play_page extends AppCompatActivity {
 
         final TextView score = findViewById(R.id.score_result);
 
-        submitButton=findViewById(R.id.button3);
-        quitButton=findViewById(R.id.buttonquit);
-        tv=findViewById(R.id.tvque);
+        nextButton = findViewById(R.id.button_next);
+        quitButton = findViewById(R.id.buttonquit);
+        tv = findViewById(R.id.tvque);
+        tv_qno = findViewById(R.id.tv_question_no);
 
         radio_g=findViewById(R.id.answersgrp);
         rb1=findViewById(R.id.radioButton1);
@@ -63,16 +66,21 @@ public class play_page extends AppCompatActivity {
         rb2.setText(opt[1]);
         rb3.setText(opt[2]);
         rb4.setText(opt[3]);
-        submitButton.setOnClickListener(v -> {
 
-            if(radio_g.getCheckedRadioButtonId()==-1)
+        nextButton.setOnClickListener(v -> {
+
+            if(radio_g.getCheckedRadioButtonId() == -1)
             {
                 Toast.makeText(getApplicationContext(), "Please select one choice", Toast.LENGTH_SHORT).show();
                 return;
             }
+
             RadioButton uans = findViewById(radio_g.getCheckedRadioButtonId());
+
             String ansText = uans.getText().toString();
+
             Toast.makeText(getApplicationContext(), ansText, Toast.LENGTH_SHORT).show();
+
             if(ansText.equals(answers[flag])) {
                 correct++;
                 Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT).show();
@@ -85,10 +93,12 @@ public class play_page extends AppCompatActivity {
             flag++;
 
             if (score != null)
-                score.setText(""+correct);
+                score.setText("" + correct);
 
-            if(flag<questions.length)
+            if(flag < questions.length)
             {
+                String qno = (flag + 1) + "/10";
+                tv_qno.setText(qno);
                 tv.setText(questions[flag]);
                 rb1.setText(opt[flag*4]);
                 rb2.setText(opt[flag*4 +1]);
@@ -100,13 +110,16 @@ public class play_page extends AppCompatActivity {
                 marks=correct;
                 Intent in = new Intent(getApplicationContext(), result_page.class);
                 startActivity(in);
+                finish();
             }
+
             radio_g.clearCheck();
         });
 
         quitButton.setOnClickListener(v -> {
             Intent intent=new Intent(getApplicationContext(), result_page.class);
             startActivity(intent);
+            finish();
         });
     }
 
