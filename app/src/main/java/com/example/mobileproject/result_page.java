@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class result extends AppCompatActivity{
+public class result_page extends AppCompatActivity{
     private TextView tv, tv2, tv3;
     private Button btnRestart;
 

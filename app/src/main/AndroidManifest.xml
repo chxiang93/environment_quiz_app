@@ -27,7 +27,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".result"
+            android:name=".result_page"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

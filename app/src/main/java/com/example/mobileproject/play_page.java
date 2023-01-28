@@ -98,14 +98,14 @@ public class play_page extends AppCompatActivity {
             else
             {
                 marks=correct;
-                Intent in = new Intent(getApplicationContext(),result.class);
+                Intent in = new Intent(getApplicationContext(), result_page.class);
                 startActivity(in);
             }
             radio_g.clearCheck();
         });
 
         quitButton.setOnClickListener(v -> {
-            Intent intent=new Intent(getApplicationContext(),result.class);
+            Intent intent=new Intent(getApplicationContext(), result_page.class);
             startActivity(intent);
         });
     }
